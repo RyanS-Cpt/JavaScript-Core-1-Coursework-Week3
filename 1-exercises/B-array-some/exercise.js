@@ -19,7 +19,7 @@ var pairs = pairsByIndex.map(function (indexes) {
   var student = students[indexes[0]];
   var mentor = mentors[indexes[1]];
   if (students[indexes[0]] || mentors[indexes[1]] === null){
-    process.exit(1);
+    console.log(process.exit(1));
   }
   return [student, mentor];
 });
