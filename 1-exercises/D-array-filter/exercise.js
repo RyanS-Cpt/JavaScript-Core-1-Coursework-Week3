@@ -8,13 +8,15 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-function arrFilter(item){
-  if (item >= 0){
-    return item;
-  };
+function arrFilter(el){
+    return pairsByIndexRaw[el] >= 0;
+  
 }
+
 var pairsByIndex = pairsByIndexRaw.filter(arrFilter); // Complete this statement
+
 console.log(pairsByIndex);
+
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
