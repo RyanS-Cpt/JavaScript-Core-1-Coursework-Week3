@@ -11,7 +11,13 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels(o2levels) {
+ let format = o2levels.replace("%","");
+ for (let i = 0; i<format.length; i++)
+ if (format[i] >= 19.5 && format[i] <=23.5){
+   return format[i];
+ }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
