@@ -12,10 +12,13 @@
 */
 
 function safeLevels(o2levels) {
- let format = o2levels.replace("%","");
- for (let i = 0; i<format.length; i++)
- if (format[i] >= 19.5 && format[i] <=23.5){
-   return format[i];
+  let stringO2 = o2levels.toString();
+  let format = stringO2.replace(/%/g,"");
+  let newArr = format.split(",");
+  console.log(newArr);
+  for (let i = 0; i<newArr.length; i++)
+  if (newArr[i] > 19.5 && newArr[i] <23.5){
+   return newArr[i] + "%";
  }
 }
 
