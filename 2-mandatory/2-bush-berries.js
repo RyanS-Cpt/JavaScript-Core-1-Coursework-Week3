@@ -20,8 +20,18 @@
   
   Let's first look at an example that will teach you how to use these methods.
 */
+let berryChecker = function (arrIndex){
+      if (arrIndex === "pink")
+      return true;
+    }
 
-function bushChecker() {}
+function bushChecker(bushArr) {
+    if (bushArr.every(berryChecker)){
+      return "Bush is safe to eat from";
+    }else{
+    return "Toxic! Leave bush alone!";
+    }
+  }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -44,13 +54,13 @@ function test(test_name, actual, expected) {
 }
 
 test(
-  "bushChecker funtion works - case 1",
+  "bushChecker function works - case 1",
   bushChecker(bushBerryColours1),
   "Toxic! Leave bush alone!"
 );
 
 test(
-  "bushChecker funtion works - case 1",
+  "bushChecker function works - case 2",
   bushChecker(bushBerryColours2),
   "Bush is safe to eat from"
 );
