@@ -14,27 +14,26 @@
         Logic: Only strings that start with A, and finish with family
   
 */
-let crewPicker = function (crewArr){
-  let crewStr = crewArr.toString();
-  for (let i =0; i<crewStr.length; i++){
-    if (crewStr[i].includes("family")){
-      return crewStr[i];
-}
-  }
-}
+// let crewPicker = function (crewArr){
+//   let crewStr = crewArr.toString();
+//   for (let i =0; i<crewStr.length; i++){
+//     if (crewStr[i].includes("family")){
+//       return crewStr[i];
+// }
+//   }
+// }
 
 function colonizers(voyagersArr) {
   let crewToStay = [];
-  let newCrew = crewPicker(voyagersArr);
-  for (let j = 0; j<newCrew.length; j++){
-    if (newCrew[j].startsWith("A")){
-      return newCrew[j];
+  for (let crewName of voyagersArr){
+    if (crewName.includes("Family") && crewName.startsWith("A")){
+      crewToStay.push(crewName);
+      console.log(crewName);
     }
   }
-
-  
-      return crewToStay;
-    }  // use arr.filter()?
+    console.log(crewToStay);
+      return crewToStay; // use arr.filter()?
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
