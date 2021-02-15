@@ -13,35 +13,29 @@ let arrFilter = pairsByIndexRaw.filter(newPairs =>{
   
   return filteredArr;
 });
+
+
+let pairsByIndex = [];
 for (let element of arrFilter){
-  let finalArr = [];
- if (element.length > 1){
-   console.log(element);
-   finalArr.push(element); 
+  // console.log(element.length);
+ if (element.length >= 2){
+  //  console.log(element);
+  pairsByIndex.push(element);
  }
+  //  console.log(pairsByIndex);
 }
 
-// for (let element of pairsByIndexRaw){
-  // if (element )
-  // console.log(Number(element));
-// }
-
-// function arrFilter(el){
-//     return pairsByIndexRaw[el] >= 0;
-  
-// }
-
-// var pairsByIndex = pairsByIndexRaw.filter(arrFilter); // Complete this statement
+// var pairsByIndex // Complete this statement
 
 // console.log(pairsByIndex);
 
-// var students = ["Islam", "Lesley", "Harun", "Rukmini"];
-// var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+var students = ["Islam", "Lesley", "Harun", "Rukmini"];
+var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
-// var pairs = pairsByIndex.map(function (indexes) {
-//   var student = students[indexes[0]];
-//   var mentor = mentors[indexes[1]];
-//   return [student, mentor];
-// });
+var pairs = pairsByIndex.map(function (indexes) {
+  var student = students[indexes[0]];
+  var mentor = mentors[indexes[1]];
+  return [student, mentor];
+});
 
-// console.log(pairs);
+console.log(pairs);
