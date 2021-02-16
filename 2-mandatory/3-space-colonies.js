@@ -26,13 +26,13 @@
 function colonizers(voyagersArr) {
   let crewToStay = [];
   for (let crewName of voyagersArr){
-    if (crewName.includes("Family") && crewName.startsWith("A")){
+    if (crewName.includes("family") && crewName.startsWith("A")){
       crewToStay.push(crewName);
       console.log(crewName);
     }
   }
     console.log(crewToStay);
-      return crewToStay; // use arr.filter()?
+      return crewToStay;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
