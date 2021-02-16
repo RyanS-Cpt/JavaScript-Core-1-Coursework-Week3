@@ -64,7 +64,11 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() {}
+function getTransportModes(locationArr) {                   //Both the input and expected output is an array - array method applicable.
+    if (locationArr.length > 1){
+     return locationArr.splice(1);
+    }
+}
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -119,7 +123,7 @@ function getLocationName() {}
    - Use array method to remove locations that is not accessible by the given transportMode.
    - Use array method to manipulate its elements.
    
-  Advanced challange: try to use arrow function when invoking an array method.
+  Advanced challenge: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
   // Implement the function body
