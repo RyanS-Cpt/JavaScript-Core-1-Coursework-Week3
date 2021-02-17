@@ -85,7 +85,15 @@ function getTransportModes(locationArr) {                   //Both the input and
     
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() {}
+function isAccessibleByTransportMode(transportArr, transTypeStr) {
+  for (let item of transportArr){
+    if(transportArr.includes(transTypeStr)){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
 
 /*
   Implement the function getLocationName that
