@@ -140,8 +140,8 @@ function journeyPlanner(locations, transportMode) {
       // for (let i =0; i<locations.length; i++){
         for (let arrElement of arrLoc){
           console.log(arrElement);
-        if (arrElement == transportMode){
-          let match = locations.map(location => location);
+        if (arrElement === transportMode){
+          let match = locations.map(location => location[0]);
           // console.log(i);
           return match;
      }
