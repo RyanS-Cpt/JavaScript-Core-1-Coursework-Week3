@@ -136,7 +136,17 @@ function getLocationName(locTransArr) {
   Advanced challenge: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
-  // Implement the function body
+    for (let arrLoc of locations){
+      // for (let i =0; i<locations.length; i++){
+        for (let arrElement of arrLoc){
+          console.log(arrElement);
+        if (arrElement == transportMode){
+          let match = locations.map(location => location);
+          // console.log(i);
+          return match;
+     }
+    }// Implement the function body
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -250,3 +260,4 @@ test(
     "Tower Bridge",
   ])
 );
+console.log(journeyPlanner(londonLocations, "tube"));
