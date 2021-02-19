@@ -104,9 +104,8 @@ function isAccessibleByTransportMode(transportArr, transTypeStr) {
    - Returns the name of the location
       e.g: "Tower Bridge"
 */
-function getLocationName(locTransArr) {
-  return locTransArr[0];
-}
+const getLocationName = (locTransArr) => locTransArr[0];
+
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -135,19 +134,26 @@ function getLocationName(locTransArr) {
    
   Advanced challenge: try to use arrow function when invoking an array method.
 */
-function journeyPlanner(locations, transportMode) {
+function journeyPlanner(locations, transportMode) {                           // Implement the function body
     for (let arrLoc of locations){
-      // for (let i =0; i<locations.length; i++){
-        for (let arrElement of arrLoc){
-          console.log(arrElement);
-        if (arrElement === transportMode){
-          let match = locations.map(location => location[0]);
-          // console.log(i);
-          return match;
-     }
-    }// Implement the function body
+        console.log("result",arrLoc);
+        for (let i = 0; i<arrLoc.length; i++){
+      if (isAccessibleByTransportMode(arrLoc[i], transportMode)){
+        console.log("check",getLocationName(arrLoc));
+          return getLocationName(arrLoc);
+      }
+    }
   }
 }
+
+
+
+ //     for (let arrElement of arrLoc){
+    //       console.log("check",arrElement);
+    //     if (arrElement === transportMode){
+    //       let match = locations.map(location => location[0]);
+    //       return match;
+    //  }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -260,4 +266,4 @@ test(
     "Tower Bridge",
   ])
 );
-console.log(journeyPlanner(londonLocations, "tube"));
+// console.log(journeyPlanner(londonLocations, "tube"));
