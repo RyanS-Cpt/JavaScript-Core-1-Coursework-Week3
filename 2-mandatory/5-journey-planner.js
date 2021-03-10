@@ -134,16 +134,18 @@ const getLocationName = (locTransArr) => locTransArr[0];
    
   Advanced challenge: try to use arrow function when invoking an array method.
 */
-function journeyPlanner(locations, transportMode) {                           // Implement the function body
+function journeyPlanner(locations, transportMode) {   
+    let itinerary = [];                        // Implement the function body
     for (let arrLoc of locations){
-        console.log("result",arrLoc);
-        for (let i = 0; i<arrLoc.length; i++){
-      if (isAccessibleByTransportMode(arrLoc[i], transportMode)){
-        console.log("check",getLocationName(arrLoc));
-          return getLocationName(arrLoc);
+        // console.log("result",arrLoc[0]);
+        if (arrLoc.includes(transportMode)){
+        // console.log("check",getLocationName(arrLoc));
+          let result = getLocationName(arrLoc);
+          itinerary.push(result);
       }
-    }
   }
+  // console.log(itinerary);
+  return itinerary;
 }
 
 
