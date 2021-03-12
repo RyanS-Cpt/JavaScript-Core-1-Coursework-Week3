@@ -26,17 +26,21 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
     let result = [];
-    // let pWordCheck = [];
+    let pWordCheck = [];
     for (let password of passwords){
-        if (/[A-Z]/i.test(password) && /[0-9]/.test(password) && /[!#$%.*&]/.test(password)){
-
+        if (/[A-Z]/.test(password) && /[0-9]/.test(password) && /[!#$%.*&]/.test(password) && password.length >= 5 && /[a-z]/.test(password) && !pWordCheck.includes(password)){
+            // console.log("before", pWordCheck);
+            pWordCheck.push(password);
+            // console.log("after", pWordCheck);
             result.push(true);
         }else{
             result.push(false);
         }
+    
+        }
+        return result;
     }
-    return result;
-}
+
 
 // Returns true if string contains at least one uppercase letter.
 function containsUppercaseLetter(string) {
